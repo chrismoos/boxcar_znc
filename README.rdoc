@@ -12,6 +12,27 @@ Module for ZNC to send push notifications to Boxcar.
 
   g++ -o boxcar.so `znc-config --cflags` -undefined suppress -flat_namespace -lcurl boxcar.cpp
 
+== Example
+
+Send this on ZNC:
+
+  /msg *boxcar znc
+
+Help:
+
+  *boxcar: This module sends notifications to the Boxcar API.
+  *boxcar: Currently notifications are sent when a private message is received.
+  *boxcar: Commands:
+  *boxcar: SET email_address password - Sets your email and password for the Boxcar API. (required)
+  *boxcar: STATUS - current status
+  *boxcar: ACTIVATE - activate boxcar notifications
+  *boxcar: DEACTIVATE - turn boxcar notifications off
+  
+== How it works
+
+If you set your Boxcar email and password, and activate notifications, whenever you receive a private message it will be pushed to Boxcar.
+  
+
 == TODO
 
 Make the HTTP calls asynchronous, right now it blocks ZNC.
