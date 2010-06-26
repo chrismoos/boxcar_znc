@@ -16,7 +16,7 @@ Module for ZNC to send push notifications to Boxcar.
 
 Send this on ZNC:
 
-  /msg *boxcar znc
+  /msg *boxcar help
 
 Help:
 
