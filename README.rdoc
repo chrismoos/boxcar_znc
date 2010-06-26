@@ -1,0 +1,17 @@
+= boxcar_znc
+
+Module for ZNC to send push notifications to Boxcar.
+
+== Compiling
+
+=== Linux
+
+  g++ -o boxcar.so `znc-config --cflags` -lcurl -shared boxcar.cpp
+
+=== Mac OS X
+
+  g++ -o boxcar.so `znc-config --cflags` -undefined suppress -flat_namespace -lcurl boxcar.cpp
+
+== TODO
+
+Make the HTTP calls asynchronous, right now it blocks ZNC.
